@@ -61,3 +61,14 @@ Total 6 (delta 0), reused 0 (delta 0)
 To https://github.com/chiragsharma0508/trial.git
  * [new branch]      main -> main
 Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) web3@web3-VirtualBox:~/trial$ git push origin v1.0
+Username for 'https://github.com': chiragsharma0508
+Password for 'https://chiragsharma0508@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 469 bytes | 469.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/chiragsharma0508/trial.git
+ * [new tag]         v1.0 -> v1.0
+
