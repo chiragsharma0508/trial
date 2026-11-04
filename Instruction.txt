@@ -1,0 +1,63 @@
+(base) web3@web3-VirtualBox:~$ mkdir trial
+(base) web3@web3-VirtualBox:~$ cd trial
+(base) web3@web3-VirtualBox:~/trial$ git init
+Initialized empty Git repository in /home/web3/trial/.git/
+(base) web3@web3-VirtualBox:~/trial$ git config --global user.name "chiragsharma0508"
+(base) web3@web3-VirtualBox:~/trial$ git config --global user.email "chiragsharma0508@gmail.com"
+(base) web3@web3-VirtualBox:~/trial$ git config --list
+user.email=chiragsharma0508@gmail.com
+user.name=chiragsharma0508
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+(base) web3@web3-VirtualBox:~/trial$ echo "hello_git" >> file1.txt
+(base) web3@web3-VirtualBox:~/trial$ cat file1.txt
+hello_git
+(base) web3@web3-VirtualBox:~/trial$ git add file1.txt
+(base) web3@web3-VirtualBox:~/trial$ git commit -m "my 1st commit"
+[master (root-commit) a0aaca9] my 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+(base) web3@web3-VirtualBox:~/trial$ echo "hello_BIT" >> file2.txt
+(base) web3@web3-VirtualBox:~/trial$ cat file2.txt
+hello_BIT
+(base) web3@web3-VirtualBox:~/trial$ git add file2.txt
+(base) web3@web3-VirtualBox:~/trial$ git commit -m "my 2nd commit"
+[master d4e7abe] my 2nd commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+(base) web3@web3-VirtualBox:~/trial$ git log --oneline
+d4e7abe (HEAD -> master) my 2nd commit
+a0aaca9 my 1st commit
+(base) web3@web3-VirtualBox:~/trial$ git tag v1.0
+(base) web3@web3-VirtualBox:~/trial$ git tag
+v1.0
+(base) web3@web3-VirtualBox:~/trial$ git tag v2.0 d4e7abe
+(base) web3@web3-VirtualBox:~/trial$ git show v1.0
+commit d4e7abebc9150c5707bd71a46367f51aae14f138 (HEAD -> master, tag: v2.0, tag: v1.0)
+Author: chiragsharma0508 <chiragsharma0508@gmail.com>
+Date:   Wed Nov 4 09:15:19 2026 +0530
+
+    my 2nd commit
+
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..079f1f8
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1 @@
++hello_BIT
+(base) web3@web3-VirtualBox:~/trial$ git remote add origin https://github.com/chiragsharma0508/trial.git
+(base) web3@web3-VirtualBox:~/trial$ git branch -M main
+(base) web3@web3-VirtualBox:~/trial$ git push -u origin main
+Username for 'https://github.com': chiragsharma0508
+Password for 'https://chiragsharma0508@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 469 bytes | 469.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/chiragsharma0508/trial.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
